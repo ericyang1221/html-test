@@ -121,6 +121,11 @@
       alert('setGestureQuit',res)
     }
 
+    window.loadRewardedAdSG = (res) =>{//禁止右滑手势回调
+      console.log('loadRewardedAd',res)
+      alert('loadRewardedAd',res)
+    }
+
   }
  
   const initAppData = () => {
@@ -218,6 +223,10 @@
   var setGestureQuit = document.querySelector("#setGestureQuit")//禁止右滑手势
   setGestureQuit.onclick =()=>{
     window.TencentNews.invoke('setGestureQuit', {'enabled':gesture_enable, 'onCallback':window.setGestureQuitSG})
+  }
+
+  loadRewardedAd.onclick =()=>{
+    window.TencentNews.invoke('loadRewardedAd', {'enabled':gesture_enable, 'onCallback':window.loadRewardedAdSG})
   }
 
   const injectAppScript = () => {
