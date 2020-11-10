@@ -132,12 +132,12 @@
       alert('showRewardedAd',res)
     }
 
-    window.rewardedAdSG = (res) =>{//激励广告回调
+  }
+
+  const rewardedAdCallback = (res) =>{//激励广告回调
       console.log('rewardedAdSG',res)
       alert('rewardedAdSG',res)
     }
-
-  }
  
   const initAppData = () => {
     
