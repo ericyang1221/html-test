@@ -135,8 +135,8 @@
   }
 
   const rewardedAdCallback = (res) =>{//激励广告回调
-      console.log('rewardedAdSG',res)
-      alert('rewardedAdSG',res)
+      console.log('rewardedAd',res)
+      alert('rewardedAd',res)
     }
  
   const initAppData = () => {
