@@ -54,6 +54,7 @@
 
   const registerCallBack = () => {
     window.getAdInfoSG = (res) =>{
+    	alert('hello')
       console.log('getAdInfo',res)
       alert('getAdInfo',res)
     }
@@ -145,7 +146,6 @@
 
   var adinfoios = document.querySelector("#adinfoios")//获取用户设备相关参数(ios))
   adinfoios.onclick =()=>{
-  	alert('getAdInfo')
     window.TencentNews.invoke('getAdInfo', {'onCallback':window.getAdInfoSG})
   }
 
