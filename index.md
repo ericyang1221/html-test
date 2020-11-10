@@ -20,6 +20,7 @@
   <button id="openWebViewWithType" >openWebViewWithType</button><br/><br/>
   <button id="closeWebview" >closeWebview</button><br/><br/>
   <button id="gestureQuitState" >gestureQuitState</button><br/><br/>
+  <button id="loadRewardedAd" >loadRewardedAd</button><br/><br/>
 </body>
 <script>
 
@@ -144,6 +145,7 @@
 
   var adinfoios = document.querySelector("#adinfoios")//获取用户设备相关参数(ios))
   adinfoios.onclick =()=>{
+  	alert('getAdInfo')
     window.TencentNews.invoke('getAdInfo', {'onCallback':window.getAdInfoSG})
   }
 
