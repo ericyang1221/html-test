@@ -20,6 +20,7 @@
   <button id="openWebViewWithType" >openWebViewWithType</button><br/><br/>
   <button id="closeWebview" >closeWebview</button><br/><br/>
   <button id="gestureQuitState" >gestureQuitState</button><br/><br/>
+  <button id="setGestureQuit" >setGestureQuit</button><br/><br/>
   <button id="loadRewardedAd" >loadRewardedAd</button><br/><br/>
 </body>
 <script>
@@ -54,7 +55,6 @@
 
   const registerCallBack = () => {
     window.getAdInfoSG = (res) =>{
-    	alert('hello')
       console.log('getAdInfo',res)
       alert('getAdInfo',res)
     }
