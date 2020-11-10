@@ -22,6 +22,7 @@
   <button id="gestureQuitState" >gestureQuitState</button><br/><br/>
   <button id="setGestureQuit" >setGestureQuit</button><br/><br/>
   <button id="loadRewardedAd" >loadRewardedAd</button><br/><br/>
+  <button id="showRewardedAd" >showRewardedAd</button><br/><br/>
 </body>
 <script>
 
@@ -121,9 +122,14 @@
       alert('setGestureQuit',res)
     }
 
-    window.loadRewardedAdSG = (res) =>{//禁止右滑手势回调
+    window.loadRewardedAdSG = (res) =>{//请求激励广告回调
       console.log('loadRewardedAd',res)
       alert('loadRewardedAd',res)
+    }
+
+    window.showRewardedAdSG = (res) =>{//展示激励广告回调
+      console.log('showRewardedAd',res)
+      alert('showRewardedAd',res)
     }
 
   }
@@ -226,7 +232,11 @@
   }
 
   loadRewardedAd.onclick =()=>{
-    window.TencentNews.invoke('loadRewardedAd', {'enabled':gesture_enable, 'onCallback':window.loadRewardedAdSG})
+    window.TencentNews.invoke('loadRewardedAd', {'entranceId':"abc123", 'onCallback':window.loadRewardedAdSG})
+  }
+
+  showRewardedAd.onclick =()=>{
+    window.TencentNews.invoke('showRewardedAd', {'maxUnlockTime':"11", 'onCallback':window.showRewardedAdSG})
   }
 
   const injectAppScript = () => {
